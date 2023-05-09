@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-    {% block content %}
+{% block content %}
     <h1>List of Cars</h1>
     <p>This is the cars page</p>
     <ul>
@@ -8,4 +8,4 @@
             <li>{{ car.make }} {{ car.model }} ({{ car.year }})</li>
         {% endfor %}
     </ul>
-    {% endblock %}
+{% endblock %}
