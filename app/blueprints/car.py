@@ -12,4 +12,4 @@ def index():
         {'make': 'BMW', 'model': 'M5', 'year': 2021},
         {'make': 'Nissan', 'model': 'Altima', 'year': 2022}
     ]
-    return render_template('cars.html', cars=cars)
+    return render_template('cars_index.html', cars=cars)
