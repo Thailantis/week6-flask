@@ -7,12 +7,14 @@
     <title>List of Cars</title>
 </head>
 <body>
+    {% block content %}
     <h1>List of Cars</h1>
     <p>This is the cars page</p>
     <ul>
         {% for cars in cars %}
-            <li>{{ car }}</li>
+            <li>{{ car.make }} {{ car.model }} ({{ car.year }})</li>
         {% endfor %}
     </ul>
+    {% endblock %}
 </body>
 </html>
