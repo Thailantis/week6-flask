@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_sqlaclehmy import SQLAlchemy
 from flask_migrate import Migrate
-
+from models import User, Car
 
 def create_app():
     app = Flask(__name__)
