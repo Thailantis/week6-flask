@@ -1,6 +1,20 @@
-from flask import jsonify
+from flask import jsonify, json
 from app import check_password_hash
+from flask import db
 
+@app.route('/cars', methods=['POST'])
+def add_car():
+  make = request.json['make']
+  model = request.json['model']
+  year = request.json['year']
+  user_id = request.json['user_id']
+  
+  car = Car(make=make, model=model, year=year, user_id=user_id)
+  db.session.add(car)
+  db.session.commit()
+
+  return jsonify({'message': 'Your car has been added successfully'})
+  
 @app.route('/signup', methods=["POST"])
 def signup():
   username = request.json['username']
